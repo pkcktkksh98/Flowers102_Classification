@@ -24,9 +24,8 @@ This project implements an end-to-end Computer Vision pipeline to classify 102 f
 - **Insight:** The model correctly ignores background foliage, indicating robust generalization.
 
 ## 🚀 How to Run
-1. Install dependencies: `pip install -r requirements.txt`
-2. Open `notebooks/02_Training.ipynb` in Google Colab (Enable GPU).
-3. Run all cells to download data and train.
+1. Open `notebooks/02_Training.ipynb` in Google Colab (Enable GPU).
+2. Run all cells to download data and train.
 
 ## 🔮 Future Work (If I had more time)
 - **Test Time Augmentation (TTA):** To further improve confidence on ambiguous samples.

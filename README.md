@@ -28,6 +28,5 @@ This project implements an end-to-end Computer Vision pipeline to classify 102 f
 2. Run all cells to download data and train.
 
 ## 🔮 Future Work (If I had more time)
-- **Test Time Augmentation (TTA):** To further improve confidence on ambiguous samples.
 - **Deployment:** Wrap the inference function in a FastAPI container for real-time serving.
 - **Hyperparameter Search:** Use Optuna to fine-tune the learning rate and weight decay dynamically.

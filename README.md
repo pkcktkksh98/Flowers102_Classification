@@ -23,10 +23,18 @@ This project implements an end-to-end Computer Vision pipeline to classify 102 f
 - Used **Grad-CAM** to verify the model focuses on relevant features (flower center/pistil) rather than background noise.
 - **Insight:** The model correctly ignores background foliage, indicating robust generalization.
 
+## 💎 Production Engineering Standards
+Beyond model metrics, this repository emphasizes software engineering best practices to ensure the solution is maintainable and deployment-ready:
+
+- **Code Quality:** The codebase is fully refactored into modular functions with strict **PEP8 compliance** and comprehensive **Type Hinting** (`typing`) to prevent runtime errors.
+- **Advanced Inference:** Implements **Test-Time Augmentation (TTA)** to boost prediction stability and **Monte Carlo Dropout** to provide uncertainty estimates (variance scores) alongside confidence levels.
+- **Resilience:** Features robust error handling, including `try-finally` blocks for state management and User-Agent headers to prevent 403 errors when fetching images from the web.
+- **Reproducibility:** Enforces deterministic behavior via strict seed setting across `torch`, `numpy`, and `cuda` backends.
+
 ## 🚀 How to Run
-1. Open `notebooks/02_Training.ipynb` in Google Colab (Enable GPU).
+1. Upload this repository in Google Colab
+1. Open `Flowers102/02_Training.ipynb` in Google Colab (Enable GPU).
 2. Run all cells to download data and train.
 
 ## 🔮 Future Work (If I had more time)
 - **Deployment:** Wrap the inference function in a FastAPI container for real-time serving.
-- **Hyperparameter Search:** Use Optuna to fine-tune the learning rate and weight decay dynamically.
